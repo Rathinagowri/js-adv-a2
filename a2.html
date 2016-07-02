@@ -1,0 +1,35 @@
+<html>
+<head>
+<ins>Problem Statement</ins>
+<br>
+Write an anonymous function which takes email address as parameter and returns True/False
+after validating the input parameter.
+
+<hr>
+<br>
+<br>
+<script>
+function validateForm() {
+var x,d;
+d = document.forms["myForm"]["email"].value;
+x=(function(z){
+var aa = d.indexOf("@");
+    var bb = d.lastIndexOf(".");
+    if (aa<1 || bb<a+2 || bb+2>=d.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+})(d);
+}
+</script>
+</head>
+<body>
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+
+Email: <input type="text" name="email"><br><br>
+
+<input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
